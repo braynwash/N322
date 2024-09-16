@@ -19,4 +19,7 @@ In this project, I have...
 
 After downloading the assignment, you can run the project by...
 
-- step 1
+- type and run `npm install` in the terminal to download remaining dev dependencies,
+- run the `web` command from NPM Scripts (Visual Studio Code) to generate a live server,
+- launch any Android device from the Android Studio Device Manager with Expo installed, and
+- type and run `a` to generate a live server on the device. 
