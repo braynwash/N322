@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Present day, Present time!</Text>
+      <Text>Edit app/index.tsx to edit this screen.</Text>
     </View>
   );
 }
