@@ -1,50 +1,27 @@
-# Welcome to your Expo app 👋
+# Homework One
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is the second homework assignment for N322 that serves as an introduction to User Authentication through Clerk.
 
-## Get started
+# Purpose
 
-1. Install dependencies
+This project aims to showcase how user authentication works in React Native Expo through the Clerk program. The project allows users to sign up and verify their email with an email code, sign in with a previously created account, and sign out from the profile page. The bulk of the content is limited and requires users to log in with an account first.
 
-   ```bash
-   npm install
-   ```
+# Tasks
 
-2. Start the app
+In this project, I have...
 
-   ```bash
-    npx expo start
-   ```
+- created a simple, responsive mobile page with basic page elements,
+- included navigation tabs with icons that take users to seperate pages,
+- included sign in, sign up, email verification and sign out functionality,
+- limited the visible tabs/page content to signed in users only,
+- uploaded the project to Github, and
+- submited the project with the link to the Github repo.
 
-In the output, you'll find options to open the app in a
+# Set up
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+After downloading the assignment, you can run the project by...
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- type and run `npm install` in the terminal to download remaining dev dependencies,
+- run the `web` command from NPM Scripts (Visual Studio Code) to generate a live server,
+- launch any Android device from the Android Studio Device Manager with Expo installed, and
+- type and run `a` to generate a live server on the device.
