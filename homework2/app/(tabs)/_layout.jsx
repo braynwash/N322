@@ -7,7 +7,7 @@ import {Colors} from "@/constants/Colors"
 export default function tabLayout() {
   return (
     <Tabs screenOptions={{
-      tabBarActiveTintColor: Colors.BLUE,
+      tabBarActiveTintColor: Colors.BLUE, tabBarStyle: { backgroundColor: '#000' }
      }}>
       <Tabs.Screen name="index"  options={{headerShown: false, 
     tabBarIcon: ({color}) => <Ionicons name='home' size={24} color={color}/> }}/>
