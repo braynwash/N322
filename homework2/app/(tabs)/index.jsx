@@ -63,10 +63,5 @@ const styles = StyleSheet.create({
  bluetxt: {
    color: Colors.BLUE,
    textAlign: "center",
-  },
-  btnWrap: {
-   display: "flex",
-   flex: 1,
-   alignItems: "center",
   }
  });

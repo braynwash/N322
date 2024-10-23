@@ -59,7 +59,7 @@ export default function Signin() {
         onChangeText={(password) => setPassword(password)}
       />
       <View style={styles.btnWrap}>
-        <Button style={styles.btn} mode="outlined" onPress={onSignInPress}>
+        <Button style={styles.btn} mode="text" onPress={onSignInPress}>
         <Text style={styles.bluetxt}>Sign In</Text>
       </Button>
       </View>
@@ -67,7 +67,7 @@ export default function Signin() {
       <View>
         <Text style={styles.header}>Don't have an account?</Text>
         <View style={styles.btnWrap}>
-          <Button style={styles.btn} mode="outlined" onPress={() => router.push("/(auth)/sign-up")}>
+          <Button style={styles.btn} mode="text" onPress={() => router.push("/(auth)/sign-up")}>
           <Text style={styles.bluetxt}>Sign Up</Text>
         </Button>
         </View>
@@ -100,22 +100,15 @@ marginTop: 30,
   fontSize: 30
  },
  btn: {
-  borderColor: Colors.BLUE,
-  borderWidth: 3,
-  padding: 5,
-  width: "50%",
+  backgroundColor: Colors.BLUE,
+  padding: 10,
   borderRadius: 50,
   marginTop: 25,
   marginBottom: 20,
  },
 bluetxt: {
-  color: Colors.BLUE,
+  color: "#FFF",
   textAlign: "center",
   fontSize: 18
- },
- btnWrap: {
-  display: "flex",
-  flex: 1,
-  alignItems: "center",
  }
 });

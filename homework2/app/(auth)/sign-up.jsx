@@ -132,22 +132,15 @@ const styles = StyleSheet.create({
    fontSize: 30
   },
   btn: {
-   borderColor: Colors.BLUE,
-   borderWidth: 3,
-   padding: 5,
-   width: "50%",
-   borderRadius: 50,
-   marginTop: 25,
-   marginBottom: 20,
-  },
- bluetxt: {
-   color: Colors.BLUE,
-   textAlign: "center",
-   fontSize: 18
-  },
-  btnWrap: {
-   display: "flex",
-   flex: 1,
-   alignItems: "center",
-  }
+    backgroundColor: Colors.BLUE,
+    padding: 10,
+    borderRadius: 50,
+    marginTop: 25,
+    marginBottom: 20,
+   },
+  bluetxt: {
+    color: "#FFF",
+    textAlign: "center",
+    fontSize: 18
+   }
  });
