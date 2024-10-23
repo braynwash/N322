@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { TextInput, Button } from "react-native-paper";
 import { useSignIn } from "@clerk/clerk-expo";
+import { Colors } from "@/constants/Colors";
 import { useRouter } from "expo-router";
 
 export default function Signin() {
@@ -36,8 +37,11 @@ export default function Signin() {
   }, [isLoaded, emailAddress, password]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.content}>
+<View style={styles.container}>
+  <Text style={styles.header}>Sign In</Text>
       <TextInput
+      style={styles.input}
         autoCapitalize="none"
         value={emailAddress}
         keyboardType="email-address"
@@ -48,26 +52,70 @@ export default function Signin() {
         }}
       />
       <TextInput
+      style={styles.input}
         value={password}
         placeholder="Password..."
         secureTextEntry={true}
         onChangeText={(password) => setPassword(password)}
       />
-      <Button mode="outlined" onPress={onSignInPress}>
-        Sign In
+      <View style={styles.btnWrap}>
+        <Button style={styles.btn} mode="outlined" onPress={onSignInPress}>
+        <Text style={styles.bluetxt}>Sign In</Text>
       </Button>
-      <View>
-        <Text>Don't have an account?</Text>
-        <Button mode="outlined" onPress={() => router.push("/(auth)/sign-up")}>
-          <Text>Sign Up</Text>
-        </Button>
       </View>
+      
+      <View>
+        <Text style={styles.header}>Don't have an account?</Text>
+        <View style={styles.btnWrap}>
+          <Button style={styles.btn} mode="outlined" onPress={() => router.push("/(auth)/sign-up")}>
+          <Text style={styles.bluetxt}>Sign Up</Text>
+        </Button>
+        </View>
+      </View>
+    </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
- container: {
-  backgroundColor: "#000",
+ content: {
+ backgroundColor: "#000",
+  height: "100%",
+  display: "flex",
+  flex: 1,
+  alignItems: "center",
+  justifyContent: "center"
+ },
+  container: {
+ width: "55%",
+  color: "#FFF",
+  
+ },
+ input: {
+marginTop: 30,
+ },
+ header: {
+  color: "#FFF",
+  textAlign: "center",
+  fontSize: 30
+ },
+ btn: {
+  borderColor: Colors.BLUE,
+  borderWidth: 3,
+  padding: 5,
+  width: "50%",
+  borderRadius: 50,
+  marginTop: 25,
+  marginBottom: 20,
+ },
+bluetxt: {
+  color: Colors.BLUE,
+  textAlign: "center",
+  fontSize: 18
+ },
+ btnWrap: {
+  display: "flex",
+  flex: 1,
+  alignItems: "center",
  }
 });

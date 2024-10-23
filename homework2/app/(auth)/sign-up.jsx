@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import { useState } from "react";
 import { useSignUp } from "@clerk/clerk-expo";
+import { Colors } from "@/constants/Colors";
 import { useRouter } from "expo-router";
 
 export default function Signup() {
@@ -58,10 +59,13 @@ export default function Signup() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.content}>
+      <View style={styles.container}>
       {!pendingVerification && (
         <>
+        <Text style={styles.header}>Create an Account</Text>
           <TextInput
+            style={styles.input}
             autoCapitalize="none"
             value={emailAddress}
             keyboardType="email-address"
@@ -69,14 +73,18 @@ export default function Signup() {
             onChangeText={(email) => setEmailAddress(email)}
           />
           <TextInput
+          style={styles.input}
             value={password}
             placeholder="Password..."
             secureTextEntry={true}
             onChangeText={(password) => setPassword(password)}
           />
-          <Button mode="outlined" onPress={onSignUpPress}>
-            <Text>Sign Up</Text>
+          <View style={styles.btnWrap}>
+            <Button style={styles.btn} mode="outlined" onPress={onSignUpPress}>
+            <Text style={styles.bluetxt}>Sign Up</Text>
           </Button>
+          </View>
+          
         </>
       )}
       {pendingVerification && (
@@ -87,13 +95,59 @@ export default function Signup() {
             keyboardType="numeric"
             onChangeText={(code) => setCode(code)}
           />
-          <Button mode="outlined" onPress={onPressVerify}>
-            Verify Email
+          <View style={styles.btnWrap}>
+            <Button style={styles.btn} mode="outlined" onPress={onPressVerify}>
+            <Text style={styles.bluetxt}>Verify Email</Text>
           </Button>
+          </View>
+          
         </>
       )}
     </View>
+    </View>
+    
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  content: {
+  backgroundColor: "#000",
+   height: "100%",
+   display: "flex",
+   flex: 1,
+   alignItems: "center",
+   justifyContent: "center"
+  },
+   container: {
+  width: "55%",
+   color: "#FFF",
+   
+  },
+  input: {
+ marginTop: 30,
+  },
+  header: {
+   color: "#FFF",
+   textAlign: "center",
+   fontSize: 30
+  },
+  btn: {
+   borderColor: Colors.BLUE,
+   borderWidth: 3,
+   padding: 5,
+   width: "50%",
+   borderRadius: 50,
+   marginTop: 25,
+   marginBottom: 20,
+  },
+ bluetxt: {
+   color: Colors.BLUE,
+   textAlign: "center",
+   fontSize: 18
+  },
+  btnWrap: {
+   display: "flex",
+   flex: 1,
+   alignItems: "center",
+  }
+ });

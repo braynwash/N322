@@ -20,11 +20,13 @@ export default function index() {
   }
 
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.content}>
+      <View style={styles.container}>
+        <Text>Home</Text>
       <Button mode='text' onPress={handleSignOut}>
         <Text>Sign Out</Text>
         </Button>
+      </View>
     </View>
   )
 }
