@@ -1,4 +1,4 @@
-# Homework One
+# Homework Two
 
 This is the second homework assignment for N322 that serves as an introduction to User Authentication through Clerk.
 
