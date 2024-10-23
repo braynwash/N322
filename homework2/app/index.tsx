@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
   },
   header: {
   color: Colors.WHITE,
-  fontFamily: "Arial",
   textAlign: "center",
   fontSize: 30,
   marginBottom: 15,
@@ -46,7 +45,6 @@ const styles = StyleSheet.create({
   },
   tagline: {
     color: Colors.WHITE,
-    fontFamily: "Arial",
     textAlign: "center",
     fontSize: 20,
     marginBottom: 15,

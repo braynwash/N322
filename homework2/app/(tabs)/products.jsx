@@ -8,8 +8,16 @@ export default function products() {
       <View style={styles.container}>
         <Text style={styles.header}>Our Products</Text>
         <View style={styles.product}>
-
+          <View style={styles.productHolder}>
+            <Image style={styles.image} source={require("./../../assets/images/Populated_Planet.png")}/>
+          <Text style={styles.productTitle}>Earth</Text>
+          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima in voluptates doloribus, optio dolorum quibusdam omnis voluptatum dolores adipisci vel.</Text>
+          <Button style={styles.btn} mode='text'>
+            <Text style={styles.whitetxt}>Add to Cart</Text>
+          </Button>
+          </View>
         </View>
+        
       </View>
     </View>
   )
@@ -24,12 +32,6 @@ const styles = StyleSheet.create({
    alignItems: "center",
    justifyContent: "center"
   },
-   container: {
-  width: "60%",
-   color: "#FFF",
-    display: "flex",
-    alignItems: "center"
-  },
   header: {
    color: "#FFF",
    textAlign: "center",
@@ -38,23 +40,33 @@ const styles = StyleSheet.create({
   },
   product: {
     backgroundColor: "#FFF",
-    width: "60%",
-    height: 250,
+    width: 300,
+    height: 400,
+  },
+  productHolder: {
     display: "flex",
+    alignItems: "center",
+    padding: 10,
+  },
+  productTitle: {
+    color: Colors.BLUE,
+    fontSize: 20,
+    marginBottom: 10,
+  },
+  image: {
+    width: "70%",
+    height: 200,
   },
   btn: {
+    marginTop: 15,
     backgroundColor: Colors.BLUE,
     padding: 5,
     borderRadius: 50,
-    marginTop: 25
+    width: "80%"
   },
   whitetxt: {
     color: Colors.WHITE,
     textAlign: "center",
-    fontSize: 18,
-  },
- bluetxt: {
-   color: Colors.BLUE,
-   textAlign: "center",
-  },
+    fontSize: 16,
+  }
  });
